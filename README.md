@@ -1,6 +1,6 @@
 # 访问
 
-自定义域名：[blog.llxbh.xyz](https://blog.llxbh.xyz/)
+自定义域名：[llxbh.xyz](https://llxbh.xyz/)
 
 Github Page：[llxbh.github.io/blog](https://llxbh.github.io/blog)
 
