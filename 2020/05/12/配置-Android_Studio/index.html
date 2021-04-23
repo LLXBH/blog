@@ -1,0 +1,661 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>配置.Android Studio - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.9-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>LLXBH</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="配置.Android Studio">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-05-12 00:46" pubdate>
+        2020年5月12日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      846 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      9
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">配置.Android Studio</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：7 个月前
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>只添加了我自己觉得舒服的配置，大多修改比较大的文件目录（例：sdk，模拟器）的存放位置<br>各种修改会尽量附上官方文档的说明和地址，本文章只做参考</p>
+<h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><a href="/2020/05/12/%E9%85%8D%E7%BD%AE-Java%EF%BC%88Win%EF%BC%89/" title="JDK">JDK</a> 可不配置，Studio 会有内置供于使用，
+<p>若设置了 <code>JAVA_HOME</code> ，会提醒多个 <strong>JDK</strong> 会影响性能，<br>请务必通过在设置页面设置 JDK 为同一个，或者直接通过 <code>STUDIO_JDK</code> 配置。<br>变量<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="环境变量：变量参考  
+">[1]</span></a></sup>有很多，这里只列出了我在使用，并建议设置的，也会让在重装 Studio 的时候省下很多功夫。</p>
+<h3 id="SDK"><a href="#SDK" class="headerlink" title="SDK"></a>SDK</h3><table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>默认路径</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ANDROID_SDK_ROOT</code></td>
+<td>sdk 的绝对路径，无默认值</td>
+<td>设置 SDK 安装目录的路径，<code>ANDROID_HOME</code> 也指向 SDK 安装目录，但已弃用。</td>
+</tr>
+</tbody></table>
+<h3 id="Studio-环境变量"><a href="#Studio-环境变量" class="headerlink" title="Studio 环境变量"></a>Studio 环境变量</h3><table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>默认路径</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><del><code>STUDIO_VM_OPTIONS</code></del></td>
+<td>-</td>
+<td>设置 <strong>studio.vmoptions</strong> 文件的位置。<br>文件包含影响 Java HotSpot 虚拟机性能特征的设置。<br><a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/intro/studio-config#customize_vm">也可在 Studio 中设置</a>。</td>
+</tr>
+<tr>
+<td><del><code>STUDIO_PROPERTIES</code></del></td>
+<td>-</td>
+<td>设置 <strong>idea.properties</strong> 文件的位置。可以使用此文件设置  Studio 的 IDE 属性（例如安装的插件），以及 IDE 支持的文件上限大小等。<br><a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/intro/studio-config#customize_ide">也可在 Studio 中设置</a>。</td>
+</tr>
+<tr>
+<td><code>STUDIO_JDK</code></td>
+<td>-</td>
+<td>Studio 所使用的 JDK 的位置。<br>IDE 启动时，会有这么个检查顺序：<code>STUDIO_JDK</code>、<code>JDK_HOME</code> 和 <code>JAVA_HOME</code>。</td>
+</tr>
+<tr>
+<td><code>STUDIO_GRADLE_JDK</code></td>
+<td>-</td>
+<td>Studio 用于启动 Gradle 守护程序的 JDK 的位置。<br>若未定义，会使用在 <a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/projects#ProjectStructure">Project Structure</a> 对话框中的设置值。</td>
+</tr>
+</tbody></table>
+<h3 id="模拟器环境变量"><a href="#模拟器环境变量" class="headerlink" title="模拟器环境变量"></a>模拟器环境变量</h3><p>注：若变量设置无效，请尝试设置 <code>ANDROID_SDK_HOME</code> 变量，<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/23042638/how-do-i-set-android-sdk-home-environment-variable#comment101433042_46976475">间接导向想要的位置</a>。</p>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>默认路径</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ANDROID_EMULATOR_HOME</code></td>
+<td><code>$ANDROID_SDK_HOME/.android/</code></td>
+<td>设置特定于用户的模拟器配置目录的路径。</td>
+</tr>
+<tr>
+<td><code>ANDROID_AVD_HOME</code></td>
+<td><code>$ANDROID_EMULATOR_HOME/avd/</code></td>
+<td>所有 AVD 特定文件的目录的路径，这些文件大多由非常大的磁盘映像组成。</td>
+</tr>
+</tbody></table>
+<h3 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h3><p>各种依赖包也会保存在这<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="在 Windows 上优化 Android Studio 性能：Gradle 缓存
+">[2]</span></a></sup></p>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>默认路径</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>GRADLE_USER_HOME</code></td>
+<td><code>%USERPROFILE%\.gradle</code></td>
+<td>Gradle 缓存保存位置</td>
+</tr>
+</tbody></table>
+<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><h2 id="配置文件修改"><a href="#配置文件修改" class="headerlink" title="配置文件修改"></a>配置文件修改</h2><h3 id="idea-properties"><a href="#idea-properties" class="headerlink" title="idea.properties"></a>idea.properties</h3><ul>
+<li>路径：Android Studio安装目录\bin\idea.properties</li>
+<li>作用：<br>修改用户配置文件，插件目录的存放位置。<br>原存放目录：<code>C:\Users\UserName\.AndroidStudio+版本号</code>，例 4.0 版本就是 <code>.AndroidStudio4.0</code>。</li>
+<li>缺点：<ol>
+<li>每次 Studio 更新，都会提醒要删除，不然无法安装。<br>解决的话可以通过<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5/7177630?fr=aladdin">符号链接</a>直接把整个目录搬运，这样连文件都不需要修改了。<br>😘顺便配上懒人工具：<a target="_blank" rel="noopener" href="https://github.com/imDema/FreeMove">FreeMove（可视化使用符号链接）</a><br><img src="idea.properties_%E4%BF%AE%E6%94%B9.png" srcset="/img/loading.gif" lazyload alt="idea.properties 修改">  </li>
+</ol>
+</li>
+</ul>
+<h2 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h2><ol>
+<li><a href="/2020/04/26/%E6%97%A5%E5%BF%97-%E5%88%A9%E7%94%A8_Docker_%E6%90%AD%E5%BB%BA_Nexus_%E4%BB%93%E5%BA%93%E7%A7%81%E6%9C%8D/" title="搭建 Nexus 仓库给项目依赖加速">搭建 Nexus 仓库给项目依赖加速</a>
+尝试 配置离线编译依赖项<br>请求依赖搭建成 查询本地离线 -》 Docker的Nexus仓库 -》 再去查找</li>
+</ol>
+<h2 id="插件篇"><a href="#插件篇" class="headerlink" title="插件篇"></a>插件篇</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://github.com/JetBrains/idea-gitignore">.ignore</a><br>不是所有的文件都需要托管给 Git 这些版本管理文件，这个插件内置了一些规则，加快提交的速度等。</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/shuzijun/leetcode-editor">LeetCode</a><br>无聊了可以刷刷题开放下思路，不用打开 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/">LeetCode</a> 看题目再在编译器编写，直接一步到位。</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/wuseal/JsonToKotlinClass">JsonToKotlinClass</a><br>可以根据 Json 生成 Kotlin 的数据类。</li>
+<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/7983-android-wifi-adb">Android WiFi ADB</a><br>一键局域网连接调试手机。</li>
+<li><a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/8575-nyan-progress-bar">Nyan Progress Bar</a><br>魔性的彩虹猫加载样式，来点样式舒服下。</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><strong>注：</strong> 文章可能存在过时因素，请参考官方文档为主  </p>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/command-line/variables#envar">环境变量：变量参考</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/intro/studio-config.html#optimize-studio-windows">在 Windows 上优化 Android Studio 性能：Gradle 缓存</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%94%BB%E6%89%93-Android/">攻打 Android</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Android/">Android</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%85%8D%E7%BD%AE/">配置</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/13/%E6%96%87%E7%AB%A0-Android_%E9%A1%B9%E7%9B%AE%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">文章.Android 项目框架搭建</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/12/%E9%85%8D%E7%BD%AE-Java%EF%BC%88Win%EF%BC%89/">
+                        <span class="hidden-mobile">配置.Java（Win）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'LLXBH/blog');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        粤ICP备19153227号
+      </a>
+    </span>
+    
+      
+        <span>
+          <a
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=19153227"
+            rel="nofollow noopener"
+            class="beian-police"
+            target="_blank"
+          >
+            
+              <span style="visibility: hidden; width: 0">|</span>
+              <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+            
+            <span>京公网安备12345678号</span>
+          </a>
+        </span>
+      
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

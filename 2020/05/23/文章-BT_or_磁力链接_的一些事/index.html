@@ -1,0 +1,633 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>文章.BT or 磁力链接 的一些事 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.9-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>LLXBH</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="文章.BT or 磁力链接 的一些事">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-05-23 02:23" pubdate>
+        2020年5月23日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      898 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      9
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">文章.BT or 磁力链接 的一些事</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：10 个月前
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h3 id="有关下载的一些协议"><a href="#有关下载的一些协议" class="headerlink" title="有关下载的一些协议"></a>有关下载的一些协议</h3><table>
+<thead>
+<tr>
+<th>网络协议</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/http?fromtitle=%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE">HTTP（超文本传输协议）</a>/ HTTPS</td>
+<td>将文件放到服务器上，然后由服务器传送到不同的用户机器上，称为 Client–Server Model 简称 C/S 模式，或者叫一对多模式。<br> 服务器的上传速度决定了总下载速度。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/ftp/13839">FTP（文件传输协议）</a>/ SFTP</td>
+<td>和 HTTP 一样，也是一对多。<br> 不过<strong>需要用户名和密码</strong>，但大多数的 FTP 下载站都会采用 <strong>Anonymous FTP</strong> 用来跳过验证。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/BitTorrent">BitTorrent</a></td>
+<td>一种内容分发协议，依赖于 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%AF%B9%E7%AD%89%E7%BD%91%E7%BB%9C">P2P</a> 。<br> 每一个下载者都将已下载的数据提供给其他下载者下载。</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="吸血雷是啥？"><a href="#吸血雷是啥？" class="headerlink" title="吸血雷是啥？"></a>吸血雷是啥？</h3><h4 id="有啥区别？"><a href="#有啥区别？" class="headerlink" title="有啥区别？"></a>有啥区别？</h4><table>
+<thead>
+<tr>
+<th></th>
+<th>BT</th>
+<th>磁力</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>下载资源</td>
+<td>P2P</td>
+<td>P2P</td>
+</tr>
+<tr>
+<td>寻找资源</td>
+<td>追踪服务器、负责引导</td>
+<td>分散索引、接力路由</td>
+</tr>
+<tr>
+<td>包含信息</td>
+<td>文件的名字、大小、<br> 分块后的块文件大小、哈希值 <br> 以及 Tracker 服务器地址。</td>
+<td></td>
+</tr>
+<tr>
+<td>关键</td>
+<td>Tracker 服务器，通过联系它而知道谁有资源</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>它们理解起来比较复杂，不过已有前人做了非常生动的总结</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1R4411w7f3">【回形针PaperClip】别再问我什么是 BT 种子</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av34370450">【万物4分钟】磁力下载是什么原理？跟用种子下载的区别大不大？</a></li>
+</ol>
+<hr>
+<h3 id="又有啥好的下载器？"><a href="#又有啥好的下载器？" class="headerlink" title="又有啥好的下载器？"></a>又有啥好的下载器？</h3><h4 id="前排提示！"><a href="#前排提示！" class="headerlink" title="前排提示！"></a>前排提示！</h4><p>Aria2 比较折腾！！！<br>想直接方便点的，可以考虑 <a target="_blank" rel="noopener" href="https://www.qbittorrent.org/">qBittorrent</a> 和 <a target="_blank" rel="noopener" href="https://www.freedownloadmanager.org/">FDM</a> ，都是很不错的替代品。</p>
+<h4 id="Windows-篇"><a href="#Windows-篇" class="headerlink" title="Windows 篇"></a>Windows 篇</h4><h4 id="Linux-篇"><a href="#Linux-篇" class="headerlink" title="Linux 篇"></a>Linux 篇</h4><ul>
+<li>操作系统：CentOS 7  <figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs vala"><span class="hljs-meta"># 安装</span><br>yum install aria2<br><br><span class="hljs-meta"># 查看版本信息</span><br>aria2c -v<br></code></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h3 id="一些下载的问题解决"><a href="#一些下载的问题解决" class="headerlink" title="一些下载的问题解决"></a>一些下载的问题解决</h3><h4 id="下载太慢或者根本不动怎么办？"><a href="#下载太慢或者根本不动怎么办？" class="headerlink" title="下载太慢或者根本不动怎么办？"></a>下载太慢或者根本不动怎么办？</h4><ol>
+<li>触发了“反吸血”，P2P软件检测到了特定用户的吸血行为或者吸血软件时，自动对这些用户 进行了降权处理。<br>最简单最直接的表现就是，你上传速度低的话，下载也高不到哪。<br>建议不要限制上传，实在不满意被上传也不要限制太狠（直接来10kb，1kb等），这种行为和吸血雷没啥两样。</li>
+<li>资源冷门，下载的人少。建议换个较近时间发布的种子尝试一下。</li>
+<li>服务器都在国外，尝试挂载代理连接试试。</li>
+<li>种子提供的 Tracker 服务太少（或者被封了）。<br>可以在 Github 上找些 Tracker 服务器分享项目，根据操作添加到下载器。<br>自用关注的一些项目：<a target="_blank" rel="noopener" href="https://github.com/XIU2/TrackersListCollection">XIU2/TrackersListCollection</a>、<a target="_blank" rel="noopener" href="https://github.com/ngosang/trackerslist">ngosang/trackerslist</a></li>
+</ol>
+<h4 id="老是卡在-99-怎么办？"><a href="#老是卡在-99-怎么办？" class="headerlink" title="老是卡在 99% 怎么办？"></a>老是卡在 99% 怎么办？</h4><ol>
+<li>大多时候处于最后完成时的校验过程中，发现个别块有问题。<br>可以尝试修改后缀，强行结束。例如迅雷一般会在文件添加后缀 <code>xxx.xltd</code> ，尝试删除 <code>.xltd</code> 是否可以正常运行。</li>
+<li>BT 种子内拥有多个文件，某个文件无法下载。<br>如包含视频和字幕，字幕导致开在 99% ，尝试取消勾选，另寻字幕下载。</li>
+</ol>
+<h4 id="为啥种子环境这么差？"><a href="#为啥种子环境这么差？" class="headerlink" title="为啥种子环境这么差？"></a>为啥种子环境这么差？</h4><ol>
+<li>??????大多人没有自己的公网 ip ，会经历 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/nat/320024">NAT</a> ，Tracker 服务器没有实时变更拥有资源的用户 ip ，只能依靠少了拥有公网 ip 的用户提供下载的主要速度。</li>
+<li>奸商运营商的上传下载速度不对等。</li>
+<li>限制 BT ，BT 导致盗版泛滥。有兴趣可以自行了解“海盗船”。<br>文章：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/20060329/answer/815485162">海盗湾是一个什么样的网站？</a><br>纪录片：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av33222732">【熟肉】瑞典《现实生活中的海盗湾 TPB AFK: The Pirate Bay Away from Keyboard (2013)》</a></li>
+</ol>
+<hr>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/85652893">求求你，别再问你的种子磁力为什么下不动了！</a></li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD/">未完待续</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%96%87%E7%AB%A0/">文章</a>
+                    
+                      <a class="hover-with-bg" href="/tags/BitTorrent/">BitTorrent</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Aria2/">Aria2</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/23/%E5%A4%87%E5%BF%98-%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">备忘.文章分类</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/13/%E6%96%87%E7%AB%A0-Android_%E9%A1%B9%E7%9B%AE%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA/">
+                        <span class="hidden-mobile">文章.Android 项目框架搭建</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.lazyComments('comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'LLXBH/blog');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        粤ICP备19153227号
+      </a>
+    </span>
+    
+      
+        <span>
+          <a
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=19153227"
+            rel="nofollow noopener"
+            class="beian-police"
+            target="_blank"
+          >
+            
+              <span style="visibility: hidden; width: 0">|</span>
+              <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+            
+            <span>京公网安备12345678号</span>
+          </a>
+        </span>
+      
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

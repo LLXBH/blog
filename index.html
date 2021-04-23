@@ -1,0 +1,974 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.9-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>LLXBH</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/04/08/%E8%AE%B0%E5%BD%95-WSL2_%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84/">端口映射</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/04/08/%E8%AE%B0%E5%BD%95-WSL2_%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84/">
+          
+          
+            
+          
+          问题在使用 Dokcer 搭建 Nexus3 私有仓库的时候，发现 WSL2 无法正常端口映射
+虽然名为 WSL ( = 适用 Linux 的 Windows 子系统)，但它却不是和 WSL1、Interix 一样，属于子系统。
+WSL2 是基于 Hyper-V 的轻型虚拟机，具有自己独立的网络接口、IP地址等。
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-08 16:19" pubdate>
+              2021-04-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD/">未完待续</a>
+            
+              <a href="/tags/Docker/">Docker</a>
+            
+              <a href="/tags/WSL2/">WSL2</a>
+            
+              <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/">虚拟机</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/08/24/%E6%96%87%E7%AB%A0-%E6%8E%A5%E5%BE%85%E5%85%89%E7%8C%AB%E9%82%A3%E4%BA%9B%E4%BA%8B/">接待光猫那些事</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/08/24/%E6%96%87%E7%AB%A0-%E6%8E%A5%E5%BE%85%E5%85%89%E7%8C%AB%E9%82%A3%E4%BA%9B%E4%BA%8B/">
+          
+          
+            
+          
+          路由器接力三部曲
+
+获得管理员（超级）账户密码
+截图网络设置（一定要知道 VLAN ID），并设置网络桥接路由器
+路由器拨号上网
+
+远程管理 -&gt; 认证 -&gt; Password：k282360892t
+设置后无法进入光猫后台
+
+进入 PC 的 “Internet” 协议版本 4 (TCP/IPv4)” 属性设置
+IP地址：根据网关修改为接近的（192.168.100.100、192.1
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-24 01:40" pubdate>
+              2020-08-24
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD/">未完待续</a>
+            
+              <a href="/tags/%E7%BD%91%E7%BB%9C/">网络</a>
+            
+              <a href="/tags/%E9%85%8D%E7%BD%AE/">配置</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/07/08/%E8%AE%B0%E5%BD%95-%E5%BC%82%E5%B8%B8%E8%A7%81%E9%97%BB%E5%BD%95%EF%BC%88Java%EF%BC%89/">记录.Java_异常见闻录</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/07/08/%E8%AE%B0%E5%BD%95-%E5%BC%82%E5%B8%B8%E8%A7%81%E9%97%BB%E5%BD%95%EF%BC%88Java%EF%BC%89/">
+          
+          
+            
+          
+          java xxx -&gt; 找不到类Java 执行 class 文件时，对 package 是强依赖。以当前路径为基础，结合 package 的包路径转换为文件路径以搜索 class 。同理，如果代码无指定 package ，则运行成功。
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-07-08 05:01" pubdate>
+              2020-07-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%94%BB%E6%89%93-Java/">攻打 Java</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/">持续更新</a>
+            
+              <a href="/tags/Java/">Java</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/06/11/%E5%A4%87%E4%BB%BD-%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%88%96%E5%B7%A5%E5%85%B7/">备份.一些好用的软件或工具</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/06/11/%E5%A4%87%E4%BB%BD-%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%88%96%E5%B7%A5%E5%85%B7/">
+          
+          
+            
+          
+          
+
+
+链接
+作用
+平台限制
+
+
+
+Aira2 or AriaNg
+一个多平台使用的下载工具与 web 前台，功能齐全，插件也多，够顶。
+
+
+
+FreeMove
+可视化创建符号链接的小工具
+Windows
+
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-06-11 03:37" pubdate>
+              2020-06-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E5%A4%87%E5%BF%98/">备忘</a>
+            
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/06/11/%E6%97%A5%E5%BF%97-%E7%A7%BB%E5%8A%A8%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%9ALinux_Deploy/">日志.移动的服务器：Linux Deploy</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/06/11/%E6%97%A5%E5%BF%97-%E7%A7%BB%E5%8A%A8%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%9ALinux_Deploy/">
+          
+          
+            
+          
+          环境记录（一定要 Root !!!）文章于 2020.06.27 记录，仅供于参考，不为任何意外负责！👌| - | - || — | — || 移动设备 | 红米Note 4x || 魔趣版本 | MK90.0-mido-200614-RELEASE || 安卓系统 | Android 9 || Linux Deploy | 2.6.0 || BusyBox | 1.30.1 |
+安装配置Bus
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-06-11 03:16" pubdate>
+              2020-06-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%94%BB%E6%89%93-%E6%9C%8D%E5%8A%A1%E5%99%A8/">攻打 服务器</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD/">未完待续</a>
+            
+              <a href="/tags/Android/">Android</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/06/06/%E6%97%A5%E5%BF%97-Docker_%E5%85%B3%E4%BA%8E%E5%A4%87%E4%BB%BD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E4%BA%8B/">日志.Docker 关于备份的一些小事</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/06/06/%E6%97%A5%E5%BF%97-Docker_%E5%85%B3%E4%BA%8E%E5%A4%87%E4%BB%BD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E4%BA%8B/">
+          
+          
+            
+          
+          常用指令和关系
+
+镜像（Image）容器的基石（环境模板），本身只是个层叠的只读文件系统。
+仓库12345# 上传docker push user/imageName# 拉取docker pull user/imageName
+
+tar 包123456# 保存，fileName 前面记得加路径，不然默认存当前目录docker save -o \xxx\xx\fileName user/imageN
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-06-06 02:10" pubdate>
+              2020-06-06
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%94%BB%E6%89%93-Docker/">攻打 Docker</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%97%A5%E5%BF%97/">日志</a>
+            
+              <a href="/tags/Docker/">Docker</a>
+            
+              <a href="/tags/%E5%A4%87%E4%BB%BD/">备份</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/06/05/%E8%AE%B0%E5%BD%95-%E6%90%9E%E4%B8%AA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9D%A5%E5%B9%B2%E5%95%A5%EF%BC%9F/">记录.搞个服务器来干啥？</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/06/05/%E8%AE%B0%E5%BD%95-%E6%90%9E%E4%B8%AA%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9D%A5%E5%B9%B2%E5%95%A5%EF%BC%9F/">
+          
+          
+            
+          
+          说明本文章主要提供于，当拥有了闲置的服务器的时候，能拿来做什么，操作教程基本通用，因为大多的运行环境都是基于 Linux 。而且服务器不单单指电脑，腾讯云，阿里云等。手机也可以作为一个服务器，详细可以了解Termux和 Linux Deploy 。
+我的服务器环境
+
+
+-
+-
+-
+
+
+
+服务器
+腾讯云服务器
+CPU：单核， 内存：1G， 带宽：1M
+
+
+系统
+CentOS 7.6 64位
+
+
+
+管
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-06-05 11:02" pubdate>
+              2020-06-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%94%BB%E6%89%93-%E6%9C%8D%E5%8A%A1%E5%99%A8/">攻打 服务器</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD/">未完待续</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a>
+            
+              <a href="/tags/%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/">长期更新</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/23/%E5%A4%87%E5%BF%98-%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB/">备忘.文章分类</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/23/%E5%A4%87%E5%BF%98-%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB/">
+          
+          
+            
+          
+          
+
+
+文章分类
+说明
+
+
+
+备忘
+单纯的一些乱七八糟的备份
+
+
+记录
+日常问题记录，一般都持续更新的
+
+
+配置
+记录一些常用的配置，或者用着比较舒服的
+
+
+日志
+完成某些事的记录，备用和参考
+
+
+文章
+学习记录思考等…
+
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-23 02:37" pubdate>
+              2020-05-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E5%A4%87%E5%BF%98/">备忘</a>
+            
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/23/%E6%96%87%E7%AB%A0-BT_or_%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5_%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/">文章.BT or 磁力链接 的一些事</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/23/%E6%96%87%E7%AB%A0-BT_or_%E7%A3%81%E5%8A%9B%E9%93%BE%E6%8E%A5_%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/">
+          
+          
+            
+          
+          有关下载的一些协议
+
+
+网络协议
+作用
+
+
+
+HTTP（超文本传输协议）/ HTTPS
+将文件放到服务器上，然后由服务器传送到不同的用户机器上，称为 Client–Server Model 简称 C/S 模式，或者叫一对多模式。 服务器的上传速度决定了总下载速度。
+
+
+FTP（文件传输协议）/ SFTP
+和 HTTP 一样，也是一对多。 不过需要用户名和密码，但大多数的 FTP 下载站都会采用 A
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-23 02:23" pubdate>
+              2020-05-23
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD/">未完待续</a>
+            
+              <a href="/tags/%E6%96%87%E7%AB%A0/">文章</a>
+            
+              <a href="/tags/BitTorrent/">BitTorrent</a>
+            
+              <a href="/tags/Aria2/">Aria2</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/05/13/%E6%96%87%E7%AB%A0-Android_%E9%A1%B9%E7%9B%AE%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA/">文章.Android 项目框架搭建</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/05/13/%E6%96%87%E7%AB%A0-Android_%E9%A1%B9%E7%9B%AE%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA/">
+          
+          
+            
+          
+          Navigation解决目标
+通过声明式编程，来确保 “应用内导航” 的一致性。
+通过可视化编程，来直观地反映页面的路由关系。
+通过抽象，来整合 Activity 和 Fragment 的路由跳转代码。
+
+一致性？例如一个软件，拥有多个 源Fragment，当跳转到
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-13 16:03" pubdate>
+              2020-05-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%94%BB%E6%89%93-Android/">攻打 Android</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD/">未完待续</a>
+            
+              <a href="/tags/Android/">Android</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+  <!-- 备案信息 -->
+  <div class="beian">
+    <span>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+        粤ICP备19153227号
+      </a>
+    </span>
+    
+      
+        <span>
+          <a
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=19153227"
+            rel="nofollow noopener"
+            class="beian-police"
+            target="_blank"
+          >
+            
+              <span style="visibility: hidden; width: 0">|</span>
+              <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+            
+            <span>京公网安备12345678号</span>
+          </a>
+        </span>
+      
+    
+  </div>
+
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
