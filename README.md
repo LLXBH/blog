@@ -3,7 +3,8 @@
 
 # 访问
 
-自定义域名：[blog.llxbh.xyz](https://blog.llxbh.xyz/)
+自定义域名：[blog.llxbh.xyz](https://blog.llxbh.xyz)
+
 Github Page：[llxbh.github.io/blog](https://llxbh.github.io/blog)
 
 ## [Hexo](https://hexo.io/zh-cn/) 配置

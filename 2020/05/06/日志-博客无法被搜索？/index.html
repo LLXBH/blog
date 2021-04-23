@@ -29,12 +29,6 @@
   <link  rel="stylesheet" href="/blog/lib/hint/hint.min.css" />
 
   
-    
-    
-      
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
-    
-  
 
   
     <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
@@ -187,7 +181,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      577 字
+      579 字
     </span>
   
 
@@ -250,7 +244,7 @@
 <li><a target="_blank" rel="noopener" href="https://pages.github.com/">Github Pages</a> 放置（平时通过 <strong>xxx.github.io</strong> 访问）</li>
 </ol>
 <h2 id="无法被爬（搜索）？"><a href="#无法被爬（搜索）？" class="headerlink" title="无法被爬（搜索）？"></a>无法被爬（搜索）？</h2><h3 id="测试是否被搜录"><a href="#测试是否被搜录" class="headerlink" title="测试是否被搜录"></a>测试是否被搜录</h3><p>在搜索引擎（百度，Google，必应等）直接输入，即可知道是否可被搜索引擎爬取到</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">site:用户名<span class="hljs-selector-class">.github</span>.io<br><span class="hljs-comment">// site     将搜索范围限定在特定站点</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">site:用户名.github.io</span><br><span class="line">&#x2F;&#x2F; site     将搜索范围限定在特定站点</span><br></pre></td></tr></table></figure>
 
 <h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>Google 和 必应 不清楚为啥被反爬。<br>但特别的是百度 (lll￢ω￢) ，GitHub 给出的官方原因是百度爬虫爬得太狠，影响了 Github Page 服务的正常使用。</p>
 <h2 id="站点地图（sitemap-xml）"><a href="#站点地图（sitemap-xml）" class="headerlink" title="站点地图（sitemap.xml）"></a>站点地图（sitemap.xml）</h2><p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE/9991876?fr=aladdin">站点地图</a>是一个网站所有链接的容器。一般存放在根目录下并命名 <strong>sitemap</strong> ，为爬虫指路，增加网站重要内容页面的收录。<br>所以我们需要创建一个 <strong>地图</strong> 给搜索引擎 <strong>用于索引</strong></p>
@@ -501,8 +495,6 @@
   
 
 
-
-  
 
 
 

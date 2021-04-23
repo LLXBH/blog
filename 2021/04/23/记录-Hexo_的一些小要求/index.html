@@ -29,12 +29,6 @@
   <link  rel="stylesheet" href="/blog/lib/hint/hint.min.css" />
 
   
-    
-    
-      
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
-    
-  
 
   
     <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
@@ -245,18 +239,18 @@
             
             <div class="markdown-body">
               <h4 id="部署时，不渲染某些文件"><a href="#部署时，不渲染某些文件" class="headerlink" title="部署时，不渲染某些文件"></a>部署时，不渲染某些文件</h4><h5 id="不渲染-html"><a href="#不渲染-html" class="headerlink" title="不渲染 .html"></a>不渲染 .html</h5><p>可在文件的最上面加上以下代码</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs HTML">---<br>layout: false<br>---<br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
 <h5 id="不渲染-md"><a href="#不渲染-md" class="headerlink" title="不渲染 .md"></a>不渲染 .md</h5><p>使用了上面代码虽然不会渲染 .md ,但会转换成为 html 文件。<br>如果想保留 md 原文件，需要在 <code>_config.yml</code> 中找到 <code>skip_render</code> 参数<br><code>skip_render</code> 匹配的位置一般为 <code>source_dir</code> ，默认是在 source 文件夹下</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs MD">skip<span class="hljs-emphasis">_render:</span><br><span class="hljs-emphasis">    - &quot;mypage/*&quot;        #单文件夹的全部文件</span><br><span class="hljs-emphasis">    - &quot;mypage/*.md&quot;     #单文件夹的指定类型文件</span><br><span class="hljs-emphasis">    - &quot;mypage/<span class="hljs-strong">**&quot;       #单文件夹的全部文件以及子目录</span></span><br></code></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">skip<span class="emphasis">_render:</span></span><br><span class="line"><span class="emphasis">    - &quot;mypage/*&quot;        #单文件夹的全部文件</span></span><br><span class="line"><span class="emphasis">    - &quot;mypage/*.md&quot;     #单文件夹的指定类型文件</span></span><br><span class="line"><span class="emphasis">    - &quot;mypage/<span class="strong">**&quot;       #单文件夹的全部文件以及子目录</span></span></span><br></pre></td></tr></table></figure>
 
 <h4 id="文章模板配置"><a href="#文章模板配置" class="headerlink" title="文章模板配置"></a>文章模板配置</h4><p>修改 Hexo 项目文件夹中的 <code>scaffolds</code> ：<br>文章：<code>post.md</code><br>草稿：<code>draft.md</code></p>
 <p>对应的是 <code>hexo new [layout] &lt;title&gt;</code> 中的 layout ，默认是 post,<br>如果在模板中，标题需要空格，需要用引号包起来。</p>
 <p>draft 是 Hexo 中的一种特殊布局，在建立时会保存到 <code>source/_drafts</code> ，默认不会显示在页面中，<br>但可以在执行时加上 <code>--dart</code> 参数，或者把 <code>_config.yml</code> 的 <code>render_drafts</code> 参数设置为：<code>true</code>，<br>用于预览</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs md">---<br>title: &#123;&#123; title &#125;&#125;<br>tags:<br>categories:<br>description:<br>date: &#123;&#123; date &#125;&#125;<br>---<br><br>点击阅读前文前, 首页能看到的文章的简短描述<br><br></code></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">description:</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">点击阅读前文前, 首页能看到的文章的简短描述</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h4 id="部署在网站的子目录"><a href="#部署在网站的子目录" class="headerlink" title="部署在网站的子目录"></a>部署在网站的子目录</h4><p>在博客配置文件(<code>_config.yml</code>)中修改：url 和 root<br>例：xxx.github.io/blog<br>则需设置</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs md">url: http://example.com/blog<br>root: /blog/<br></code></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url: http://example.com/blog</span><br><span class="line">root: /blog/</span><br></pre></td></tr></table></figure>
 
             </div>
             <hr>
@@ -298,7 +292,7 @@
                     
                     
                       <a href="/blog/2021/04/08/%E8%AE%B0%E5%BD%95-WSL2_%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84/">
-                        <span class="hidden-mobile">端口映射</span>
+                        <span class="hidden-mobile">记录.WSL2 端口映射</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -489,8 +483,6 @@
   
 
 
-
-  
 
 
 

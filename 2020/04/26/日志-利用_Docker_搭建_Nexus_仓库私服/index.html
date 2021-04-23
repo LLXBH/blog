@@ -29,12 +29,6 @@
   <link  rel="stylesheet" href="/blog/lib/hint/hint.min.css" />
 
   
-    
-    
-      
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
-    
-  
 
   
     <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
@@ -248,15 +242,15 @@
 <li><a target="_blank" rel="noopener" href="https://www.docker.com/">Docker</a></li>
 <li><a target="_blank" rel="noopener" href="https://hub.docker.com/r/sonatype/nexus3/">Nexus 镜像</a></li>
 </ol>
-<h2 id="拉取和启动-Nexus"><a href="#拉取和启动-Nexus" class="headerlink" title="拉取和启动 Nexus"></a>拉取和启动 Nexus</h2><h3 id="1-拉取镜像"><a href="#1-拉取镜像" class="headerlink" title="1. 拉取镜像"></a>1. 拉取镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker pull sonatype/nexus3<br></code></pre></td></tr></table></figure>
+<h2 id="拉取和启动-Nexus"><a href="#拉取和启动-Nexus" class="headerlink" title="拉取和启动 Nexus"></a>拉取和启动 Nexus</h2><h3 id="1-拉取镜像"><a href="#1-拉取镜像" class="headerlink" title="1. 拉取镜像"></a>1. 拉取镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull sonatype/nexus3</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-启动"><a href="#2-启动" class="headerlink" title="2. 启动"></a>2. 启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">/*<br> * -d       后台运行<br> * -p       指定端口映射：主机（宿主）端口:容器端口<br> */<br>docker run -d -p 8081:8081 sonatype/nexus3<br></code></pre></td></tr></table></figure>
+<h3 id="2-启动"><a href="#2-启动" class="headerlink" title="2. 启动"></a>2. 启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line"> * -d       后台运行</span><br><span class="line"> * -p       指定端口映射：主机（宿主）端口:容器端口</span><br><span class="line"> */</span><br><span class="line">docker run -d -p 8081:8081 sonatype/nexus3</span><br></pre></td></tr></table></figure>
 
 <p>这里的启动是暂时的，无法保存设置等（设置的代理仓库，密码），<strong>stop</strong> 后再重新启动就会像第一次打开一样</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs base"># 数据持久化操作<br># 1. 创建数据卷<br>docker volume create --name nexus-data<br><br># 2. 在启动容器的时候绑定数据卷<br># --name   命名容器，方便下次指定启动（直接：docker start nexus）<br># -v       绑定数据卷<br>docker run -d -p 8081:8081 --name nexus -v nexus-data:&#x2F;nexus-data sonatype&#x2F;nexus3<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 数据持久化操作</span><br><span class="line"># 1. 创建数据卷</span><br><span class="line">docker volume create --name nexus-data</span><br><span class="line"></span><br><span class="line"># 2. 在启动容器的时候绑定数据卷</span><br><span class="line"># --name   命名容器，方便下次指定启动（直接：docker start nexus）</span><br><span class="line"># -v       绑定数据卷</span><br><span class="line">docker run -d -p 8081:8081 --name nexus -v nexus-data:&#x2F;nexus-data sonatype&#x2F;nexus3</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-获取登录密码"><a href="#3-获取登录密码" class="headerlink" title="3. 获取登录密码"></a>3. 获取登录密码</h3><p>Nexus 从 3.x 开始，密码不再固定，而是设备生成并保存在 <strong>admin.password</strong> 文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs base"># 执行命令进入一个交互的终端页面<br>docker exec -it 容器id bash<br><br># 根据情况找到安装目录，下面我 docker 下的 newxus 的安装目录<br>cd &#x2F;opt&#x2F;sonatype&#x2F;sonatype-work&#x2F;nexus3&#x2F;<br><br># 查看密码 <br>vi admin.password<br></code></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 执行命令进入一个交互的终端页面</span><br><span class="line">docker exec -it 容器id bash</span><br><span class="line"></span><br><span class="line"># 根据情况找到安装目录，下面我 docker 下的 newxus 的安装目录</span><br><span class="line">cd &#x2F;opt&#x2F;sonatype&#x2F;sonatype-work&#x2F;nexus3&#x2F;</span><br><span class="line"></span><br><span class="line"># 查看密码 </span><br><span class="line">vi admin.password</span><br></pre></td></tr></table></figure>
 
 <p>不要通过 <strong>exit</strong> 或者 <strong>ctrl+d</strong> 退出交互,这样会连带着 <strong>容器</strong> 一并 <strong>stop</strong>  </p>
 <p>快捷键退出交互：<strong>ctrl + p + q</strong></p>
@@ -537,8 +531,6 @@
   
 
 
-
-  
 
 
 
