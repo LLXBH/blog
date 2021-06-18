@@ -233,7 +233,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2020年9月30日 晚上
+                  本文最后更新于：2021年5月13日 晚上
                 
               </p>
             
@@ -241,7 +241,7 @@
               <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>只添加了我自己觉得舒服的配置，大多修改比较大的文件目录（例：sdk，模拟器）的存放位置<br>各种修改会尽量附上官方文档的说明和地址，本文章只做参考</p>
 <h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><a href="/blog/2020/05/12/%E9%85%8D%E7%BD%AE-Java%EF%BC%88Win%EF%BC%89/" title="JDK">JDK</a> 可不配置，Studio 会有内置供于使用，
 <p>若设置了 <code>JAVA_HOME</code> ，会提醒多个 <strong>JDK</strong> 会影响性能，<br>请务必通过在设置页面设置 JDK 为同一个，或者直接通过 <code>STUDIO_JDK</code> 配置。<br>变量<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="环境变量：变量参考  
-">[1]</span></a></sup>有很多，这里只列出了我在使用，并建议设置的，也会让在重装 Studio 的时候省下很多功夫。</p>
+">[1]</span></a></sup>有很多，这里只列出了我在使用，并建议设置的(!)，也会让在重装 Studio 的时候省下很多功夫。</p>
 <h3 id="SDK"><a href="#SDK" class="headerlink" title="SDK"></a>SDK</h3><table>
 <thead>
 <tr>
@@ -251,7 +251,7 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><code>ANDROID_SDK_ROOT</code></td>
+<td>!<code>ANDROID_SDK_ROOT</code></td>
 <td>sdk 的绝对路径，无默认值</td>
 <td>设置 SDK 安装目录的路径，<code>ANDROID_HOME</code> 也指向 SDK 安装目录，但已弃用。</td>
 </tr>
@@ -275,7 +275,7 @@
 <td>设置 <strong>idea.properties</strong> 文件的位置。可以使用此文件设置  Studio 的 IDE 属性（例如安装的插件），以及 IDE 支持的文件上限大小等。<br><a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/intro/studio-config#customize_ide">也可在 Studio 中设置</a>。</td>
 </tr>
 <tr>
-<td><code>STUDIO_JDK</code></td>
+<td>!<code>STUDIO_JDK</code></td>
 <td>-</td>
 <td>Studio 所使用的 JDK 的位置。<br>IDE 启动时，会有这么个检查顺序：<code>STUDIO_JDK</code>、<code>JDK_HOME</code> 和 <code>JAVA_HOME</code>。</td>
 </tr>
@@ -316,12 +316,13 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><code>GRADLE_USER_HOME</code></td>
+<td>!<code>GRADLE_USER_HOME</code></td>
 <td><code>%USERPROFILE%\.gradle</code></td>
 <td>Gradle 缓存保存位置</td>
 </tr>
 </tbody></table>
-<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><h2 id="配置文件修改"><a href="#配置文件修改" class="headerlink" title="配置文件修改"></a>配置文件修改</h2><h3 id="idea-properties"><a href="#idea-properties" class="headerlink" title="idea.properties"></a>idea.properties</h3><ul>
+<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="%E6%95%88%E6%9E%9C%E5%9B%BE.png" srcset="/blog/img/loading.gif" lazyload alt="效果图"></p>
+<h2 id="配置文件修改"><a href="#配置文件修改" class="headerlink" title="配置文件修改"></a>配置文件修改</h2><h3 id="idea-properties"><a href="#idea-properties" class="headerlink" title="idea.properties"></a>idea.properties</h3><ul>
 <li>路径：Android Studio安装目录\bin\idea.properties</li>
 <li>作用：<br>修改用户配置文件，插件目录的存放位置。<br>原存放目录：<code>C:\Users\UserName\.AndroidStudio+版本号</code>，例 4.0 版本就是 <code>.AndroidStudio4.0</code>。</li>
 <li>缺点：<ol>

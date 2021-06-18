@@ -181,7 +181,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      586 字
+      647 字
     </span>
   
 
@@ -191,7 +191,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6
+      7
        分钟
     </span>
   
@@ -233,7 +233,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年4月8日 下午
+                  本文最后更新于：2021年6月18日 下午
                 
               </p>
             
@@ -250,7 +250,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 数据持久化操作</span><br><span class="line"># 1. 创建数据卷</span><br><span class="line">docker volume create --name nexus-data</span><br><span class="line"></span><br><span class="line"># 2. 在启动容器的时候绑定数据卷</span><br><span class="line"># --name   命名容器，方便下次指定启动（直接：docker start nexus）</span><br><span class="line"># -v       绑定数据卷</span><br><span class="line">docker run -d -p 8081:8081 --name nexus -v nexus-data:&#x2F;nexus-data sonatype&#x2F;nexus3</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-获取登录密码"><a href="#3-获取登录密码" class="headerlink" title="3. 获取登录密码"></a>3. 获取登录密码</h3><p>Nexus 从 3.x 开始，密码不再固定，而是设备生成并保存在 <strong>admin.password</strong> 文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 执行命令进入一个交互的终端页面</span><br><span class="line">docker exec -it 容器id bash</span><br><span class="line"></span><br><span class="line"># 根据情况找到安装目录，下面我 docker 下的 newxus 的安装目录</span><br><span class="line">cd &#x2F;opt&#x2F;sonatype&#x2F;sonatype-work&#x2F;nexus3&#x2F;</span><br><span class="line"></span><br><span class="line"># 查看密码 </span><br><span class="line">vi admin.password</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 执行命令进入一个交互的终端页面</span><br><span class="line">docker exec -it 容器id bash</span><br><span class="line"></span><br><span class="line"># 进入 Nexus 的数据目录</span><br><span class="line">cd &#x2F;nexus-data&#x2F;</span><br><span class="line"></span><br><span class="line"># 查看密码 </span><br><span class="line">vi admin.password</span><br></pre></td></tr></table></figure>
 
 <p>不要通过 <strong>exit</strong> 或者 <strong>ctrl+d</strong> 退出交互,这样会连带着 <strong>容器</strong> 一并 <strong>stop</strong>  </p>
 <p>快捷键退出交互：<strong>ctrl + p + q</strong></p>
@@ -264,7 +264,8 @@
 <li>轻轻松松执行<br><code>docker run name</code></li>
 <li>如果是 <strong>Docker Hub</strong> 还可以界面操作启动<br><img src="Docker_Hub_%E5%AE%B9%E5%99%A8%E7%9B%AE%E5%BD%95.png" srcset="/blog/img/loading.gif" lazyload alt="Docker Hub 容器目录"></li>
 </ol>
-<h2 id="代理且使用仓库"><a href="#代理且使用仓库" class="headerlink" title="代理且使用仓库"></a>代理且使用仓库</h2><p>若是搭建为了本地电脑使用，建议打开 “匿名访问服务器” 选项<br><img src="Nexus_%E5%8C%BF%E5%90%8D%E8%AE%BF%E9%97%AE%E6%9C%8D%E5%8A%A1%E5%99%A8.png" srcset="/blog/img/loading.gif" lazyload alt="Nexus 匿名访问服务器"></p>
+<h2 id="代理且使用仓库"><a href="#代理且使用仓库" class="headerlink" title="代理且使用仓库"></a>代理且使用仓库</h2><p>为了方便使用，建议打开 “匿名访问服务器” 选项<br>不然每次拉取仓库文件都需要配置个 “密码”<br><img src="Nexus_%E5%8C%BF%E5%90%8D%E8%AE%BF%E9%97%AE%E6%9C%8D%E5%8A%A1%E5%99%A8.png" srcset="/blog/img/loading.gif" lazyload alt="Nexus 匿名访问服务器"></p>
+<h2 id="仓库分类"><a href="#仓库分类" class="headerlink" title="仓库分类"></a>仓库分类</h2><p><img src="Nexus_Repositories_Type.png" srcset="/blog/img/loading.gif" lazyload alt="Nexus 仓库类型"></p>
 <table>
 <thead>
 <tr>
@@ -285,7 +286,54 @@
 <td>代理其他仓库</td>
 </tr>
 </tbody></table>
-<h3 id="注：以下教程是按照本人开发环境设置写录，请根据需要参考修改"><a href="#注：以下教程是按照本人开发环境设置写录，请根据需要参考修改" class="headerlink" title="注：以下教程是按照本人开发环境设置写录，请根据需要参考修改*"></a>注：以下教程是按照本人开发环境设置写录，请根据需要参考修改*</h3><h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>需要代理的地址<br>国内公开的代理仓库</p>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>注：以下教程是按照本人开发环境设置写录，请根据需要参考修改</p>
+<h3 id="需要代理的仓库"><a href="#需要代理的仓库" class="headerlink" title="需要代理的仓库"></a>需要代理的仓库</h3><table>
+<thead>
+<tr>
+<th>仓库名</th>
+<th>类型</th>
+<th><a href="(https://maven.aliyun.com/)">阿里源</a></th>
+<th>源地址</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>android</td>
+<td>group</td>
+<td></td>
+<td></td>
+<td>聚合仓</td>
+</tr>
+<tr>
+<td>google</td>
+<td>proxy</td>
+<td><a target="_blank" rel="noopener" href="https://maven.aliyun.com/repository/google">https://maven.aliyun.com/repository/google</a></td>
+<td><a target="_blank" rel="noopener" href="https://maven.google.com/">https://maven.google.com/</a></td>
+<td></td>
+</tr>
+<tr>
+<td>central</td>
+<td>proxy</td>
+<td><a target="_blank" rel="noopener" href="https://maven.aliyun.com/repository/central">https://maven.aliyun.com/repository/central</a></td>
+<td><a target="_blank" rel="noopener" href="https://repo1.maven.org/maven2/">https://repo1.maven.org/maven2/</a></td>
+<td></td>
+</tr>
+<tr>
+<td>jcenter</td>
+<td>proxy</td>
+<td><a target="_blank" rel="noopener" href="https://maven.aliyun.com/repository/public">https://maven.aliyun.com/repository/public</a></td>
+<td><a target="_blank" rel="noopener" href="http://jcenter.bintray.com/">http://jcenter.bintray.com/</a></td>
+<td></td>
+</tr>
+<tr>
+<td>public</td>
+<td>proxy</td>
+<td><a target="_blank" rel="noopener" href="https://maven.aliyun.com/repository/public">https://maven.aliyun.com/repository/public</a></td>
+<td></td>
+<td>central仓和 jcenter 仓的聚合仓</td>
+</tr>
+</tbody></table>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p><img src="Nexus_My_Repository.png" srcset="/blog/img/loading.gif" lazyload alt="我的仓库配置"></p>
 <h2 id="备份数据"><a href="#备份数据" class="headerlink" title="备份数据"></a>备份数据</h2><p>直接备份数据卷即可。<br>可以参考：<a href="/blog/2020/06/06/%E6%97%A5%E5%BF%97-Docker_%E5%85%B3%E4%BA%8E%E5%A4%87%E4%BB%BD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E4%BA%8B/" title="日志.Docker 关于备份的一些小事">日志.Docker 关于备份的一些小事</a></p>
 
             </div>
